@@ -4,7 +4,13 @@
 
 
 ## Usage
-At this time, all examples can be found within the app/ directory of the source.  There is current a node_modules directory included in the repository, however this will be removed and ignored once the MySQL connector is finished and the build scripts are working to minimize the size of the repository.
+At this time, all examples can be found within the app/ directory of the source.  
+
+You will need to:
+
+<i>npm install nk</i>
+
+before running the application.
 
 
 ## Development
