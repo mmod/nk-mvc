@@ -1,0 +1,31 @@
+				<div class="panel vestibule-login">
+				    <section id="login">
+				    	<h1>[[ pagetitle ]]</h1>
+			            <p></p>
+			            <form action="/account/login" method="post">
+				            <div class="form-group">
+				            	[[ html.label( model.username, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+				                <div class="col-md-6">
+				                	[[ html.textbox( model.username, { "classes": "form-control", "name": "username" } ) ]]
+				                	[[ html.validationmessage( model.username ) ]]
+				                </div>
+				            </div>
+				            <div class="form-group">
+				            	[[ html.label( model.password, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+				                <div class="col-md-6">
+				                	[[ html.password( model.password, { "classes": "form-control" } ) ]]
+				                	[[ html.validationmessage( model.password ) ]]
+				                </div>
+				            </div>
+			                <div class="col-md-offset-8 col-md-4">
+			                    <div class="checkbox">
+			                		[[ html.checkbox( model.rememberme ) ]]
+		            				[[ html.label( model.rememberme, { "classes": "straight-label" } ) ]]
+			                    </div>
+			                </div>
+			                <div class="col-md-offset-8 col-md-4">
+			                    <input type="submit" value="Log in" class="btn btn-default" />
+			                </div>
+			        	</form>
+				    </section>
+				</div>

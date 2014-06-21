@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>[[ title ]]</title>
+		<link rel="stylesheet" type="text/css" href="/css/mmod.css" />
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+	</head>
+	<body>
+		<div id="mmod-lyte" class="panel lyte">
+            <a class="btn close" onclick="javascript:$.mmod.lytebox( \"close\" );">X</a>
+            <div class="content-block">
+            </div>
+        </div>
+
+        <div id="mmod-lytebox" class="lytebox">
+            <div id="mmod-handle-lytebox-drag" class="header-block">
+                <a class="title">MMod</a>
+                <a class="btn close" onclick="javascript:$.mmod.lytebox( \"close\" );">X</a>
+            </div>
+            <div class="content-block">
+            </div>
+        </div>
+        
+        <div class="container fluid">
+            <div class="block app-main">
+                [[ 
+                	// You can put comments inside of the subscript blocks and as many spaces and new lines as you wish too
+                	/* Any kind of comment that is, and it can be a multi-line or single-line style comment */
+                	body
+                	// Comments can also be placed anywhere within the subscript block and they will be stripped properly
+                ]]
+                <hr />
+                <footer>
+                    <p>&copy; 2011-[[ date.year ]] Massively Modified, Inc.</p>
+               </footer>
+            </div>
+        </div>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.js"></script>
+	</body>
+</html>

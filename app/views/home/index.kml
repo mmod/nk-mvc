@@ -1,0 +1,8 @@
+				<div class="panel">
+				    <section id="showcase">
+				    	<h1>[[ pagetitle ]]</h1>
+			            <hr />
+				            
+			            <p>Welcome to your new web application :)</p>
+				    </section>
+				</div>
