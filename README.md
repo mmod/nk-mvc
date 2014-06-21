@@ -1,20 +1,18 @@
 
 
-# MMod-Node
-
+# nk-mvc
 
 
 ## Usage
+At this time, all examples can be found within the app/ directory of the source.  There is current a node_modules directory included in the repository, however this will be removed and ignored once the MySQL connector is finished and the build scripts are working to minimize the size of the repository.
 
 
+## Development
 
-## Developing
+Feel free to fork the repository and submit pull requests.  As the framework develops we will move on to a CMS/XRM system built upon the MVC framework.
 
 
-
-### Tools
-
-Created with:
+### Created with:
 
 [Eclipse Kepler](https://www.eclipse.org/downloads/)
 
