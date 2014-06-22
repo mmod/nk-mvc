@@ -12,7 +12,6 @@ config =
 {
     // Development configuration
     development: {
-        // App URL
         url: 'http://dev.mmogp.com',
         /*
         mail: {
@@ -44,9 +43,7 @@ config =
             debug: false
         },
         server: {
-            // Host to be passed to node's `net.Server#listen()`
             host: '0.0.0.0',
-            // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: '7724'
         },
         paths: {
@@ -54,9 +51,7 @@ config =
         }
     },
 
-    // ### Production
-    // When running Ghost in the wild, use the production environment
-    // Configure your URL and mail settings here
+    // Production configuration
     production: {
         url: 'http://dev.mmogp.com',
         forceAdminSSL: true,
@@ -88,13 +83,11 @@ config =
             debug: false
         },
         server: {
-            // Host to be passed to node's `net.Server#listen()`
             host: '0.0.0.0',
-            // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: '7724'
         }
     },
 };
 
 // Use module.exports so that we have the direct context of the exported object, regardless of type.
-module.exports = config;
+module.exports = exports = config;
