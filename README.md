@@ -1,6 +1,6 @@
 # nk-mvc
 
-The 'Hello World!' example of a NodaKwaeri MVC Application.
+The 'Hello World!' example of a nodakwaeri MVC Application.
 
 
 ##Installation
