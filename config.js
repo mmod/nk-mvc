@@ -37,9 +37,9 @@ config =
             client: 'mysql',
             host: 'localhost',
             port: '3306',
-            database: 'mmod',
-            username: 'root',
-            password: '^Rkitek720$',
+            database: 'dev',
+            username: 'devadm',
+            password: 'YourDevelopmentPassword',
             debug: false
         },
         server: {
@@ -77,9 +77,9 @@ config =
             client: 'mysql',
             host: 'localhost',
             port: '3306',
-            database: 'mmod',
-            username: 'root',
-            password: '^Rkitek720$',
+            database: 'pro',
+            username: 'proadm',
+            password: 'YourProductionPassword',
             debug: false
         },
         server: {
