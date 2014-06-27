@@ -34,7 +34,7 @@ var context =
 		},
 		schema: {
 			/* 
-			 * Within Schema, each member is a column of the table, spelled exactly as it exists within the respective table.
+			 * Within Schema, each member is a column of the table - except for the member which defines the table - spelled exactly as it exists within the respective table.
 			 * The value of each member, is an array containing the following attributes by index:
 			 *
 			 * 0:  Key or Boolean value, indicating whether the value is required, or if it is a key.  The first key in the array is the primary.

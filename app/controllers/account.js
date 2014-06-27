@@ -56,48 +56,47 @@ accountController.prototype.login = function( request, response )
 // HTTP POST /account/login
 accountController.prototype.loginPost = function( request, response )
 {
-	var layout = this.config.view_provider;
-	
-	// The user has submitted the login form, let's attempt to log them in.
-	for( var part in request.posted )
-	{
-		console.log( 'Post Var: `' + part + '`, Value: `' + request.posted[part] + '`.' );
-	}
-	
-	// We need to invoke the db provider and have it fetch us some datas
-	var db = this.config.db_provider;
-	var auth = db.user.get( request.posted.username, request.posted.password );
-	
-	if( auth !== false )
-	{
-		request.session.data.isAuthenticated = true;
-		if( request.posted.rememberme !== undefined || null || false )
-		{	
-			request.session.data.persistence = true;
-		}
-		request.session.data.username = request.posted.username;
-		request.session.data.password = request.posted.password;
-		request.session.data.email = auth.email;
-		request.session.data.name.first = auth.first;
-		request.session.data.name.last = auth.last;
-	}
-	else
-	{
-		request.session.data.isAuthenticated = false;
-		request.session.data.name.first = 'Guest';
-	}
-	
-	// We just need to display fields for a login here
-	var klay = { 
+	var viewModel = require( '../models/account' ).loginView,
+	model = this.model.set( viewModel ),
+	layout = this.config.view_provider,
+	klay = { 
 			controller: this.config.controller, 
-			model: require( '../models/account' ).loginView,
+			model: viewModel,
 			view: this.config.view, 
 			layout: 'shared/main',
 			title: 'MMOD Framework',
-			pagetitle: 'You tried to log in, but... failed.'
+			pagetitle: 'You tried to log in.'
 	};
 	
-	layout.construct( request, response, klay );
+	// Here we define a callback for our authentication method
+	var callback = function( req, res, authenticated )
+	{
+		if( authenticated !== false )
+		{
+			req.session.data.isAuthenticated = true;
+			if( request.posted.rememberme !== undefined || null || false )
+			{	
+				request.session.data.persistence = true;
+			}
+			req.session.data.username = req.posted.username;
+			req.session.data.password = req.posted.password;
+			req.session.data.email = authenticated.email;
+			req.session.data.name.first = authenticated.first;
+			req.session.data.name.last = authenticated.last;
+		}
+		else
+		{
+			req.session.data.isAuthenticated = false;
+			req.session.data.name.first = 'Guest';
+		}
+		
+		layout.construct( req, res, klay );
+	};
+	
+	// And here we asynchronously execute the model's authenticate method. I'm sure you can see the changes you would need to make
+	// in this controller method to make things synchronous instead (i.e.  remove code body from callback, have it run after model executes, but have
+	// model return its value to a variable within this method's scope like var authenticated = mode.authenticate... callback can be left undefined.)
+	model.authenticate( request, response, callback );
 };
 
 // HTTP /account/manage

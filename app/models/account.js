@@ -16,6 +16,30 @@
 var accountModel = 
 {
 	loginView: {
+		authenticate: function( request, response, callback )
+		{
+			var user = request.posted.username,
+			pass = request.posted.password;
+			
+			// Prep the database object
+			var db = this.dbo();
+			
+			// Run our query
+			var authenticated = db
+			.select( 'users' )
+			.where( { username: [ '=', 'text', user ], password: [ '=', 'text', pass ] } )
+			.execute();
+			
+			// And invoke the callback, passing the result of our query
+			if( this.type( callback ) === 'function' )
+			{	// Asynchronous
+				callback( request, response, authenticated );
+			}
+			else
+			{	// Synchronous
+				return authenticated;
+			}
+		},
 		schema: {
 			/* 
 			 * Account Login View Model
