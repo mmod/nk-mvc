@@ -3,7 +3,7 @@
  * 
  * package: nk-mvc
  * version:  $id$
- * author:  Richard B. Winters <a href="mailto:rik@massivelymodified.com">rik At MassivelyModified</a>
+ * author:  Richard B. Winters <a href="mailto:rik@mmogp.com">rik At MMOGP</a>
  * copyright: 2011-2014 Massively Modified, Inc.
  */
 
