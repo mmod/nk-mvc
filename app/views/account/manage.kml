@@ -1,6 +1,66 @@
 				<div class="panel">
-				    <section id="manageForm">
+				    <section id="manage">
 				    	<h1>[[ pagetitle ]]</h1>
-				            
+			            <p></p>
+			            <form action="/account/manage" method="post">
+			            <div class="form-group">
+				            	[[ html.label( model.company, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+				                <div class="col-md-6">
+				                	[[ html.label( usercompany, { "classes": "control-label" } ) ]]
+				                </div>
+				            </div>
+				            <div class="form-group">
+				            	[[ html.label( model.username, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+				                <div class="col-md-6">
+				                	[[ html.label( username, { "classes": "control-label" } ) ]]
+				                </div>
+				            </div>
+				            <div class="form-group">
+				            	[[ html.label( model.type, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+				                <div class="col-md-6">
+				                	[[ html.select( usertypes, { "classes": "form-control", "name": "username" } ) ]]
+				                	[[ html.validationmessage( model.type ) ]]
+				                </div>
+				            </div>
+				            <div class="form-group">
+				            	[[ html.label( model.email, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+				                <div class="col-md-6">
+				                	[[ html.textbox( useremail, { "classes": "form-control", "name": "email", "placeholder": "i.e. email@address.com" } ) ]]
+				                	[[ html.validationmessage( model.email ) ]]
+				                </div>
+				            </div>
+				            <div class="form-group">
+				            	[[ html.label( model.first, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+				                <div class="col-md-6">
+				                	[[ html.textbox( John, { "classes": "form-control", "name": "first", "placeholder": "i.e. Richard" } ) ]]
+				                	[[ html.validationmessage( model.first ) ]]
+				                </div>
+				            </div>
+				            <div class="form-group">
+				            	[[ html.label( model.last, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+				                <div class="col-md-6">
+				                	[[ html.textbox( Doe, { "classes": "form-control", "name": "last", "placeholder": "i.e. Winters" } ) ]]
+				                	[[ html.validationmessage( model.last ) ]]
+				                </div>
+				            </div>
+				            <div class="form-group">
+				            	[[ html.label( model.password, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+				                <div class="col-md-6">
+				                	[[ html.password( model.password, { "classes": "form-control" } ) ]]
+				                	[[ html.validationmessage( model.password ) ]]
+				                </div>
+				            </div>
+				            <div class="form-group">
+				            	[[ html.label( model.retypepassword, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
+				                <div class="col-md-6">
+				                	[[ html.password( model.retypepassword, { "classes": "form-control" } ) ]]
+				                	[[ html.validationmessage( model.retypepassword ) ]]
+				                </div>
+				            </div>
+			                <div class="col-md-offset-8 col-md-4">
+			                    <input type="submit" value="Update Account" class="btn btn-default" />
+			                </div>
+			        	</form>
+				    </section>    
 				    </section>
 				</div>

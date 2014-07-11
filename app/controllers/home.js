@@ -23,10 +23,17 @@ homeController.prototype.index = function( request, response )
 			controller: this.config.controller, 
 			view: this.config.view,
 			layout: 'shared/main',
-			title: 'MMOD Framework',
-			pagetitle: 'Hello World!'
-			// Any additional data you wish to send
+			viewbag: {
+				title: 'MMOD Framework',
+				pagetitle: 'Hello World!',
+				testvar: 
+				[
+				 	{ 'a': 'First row', 'b': 'Second var' },
+				 	{ 'a': 'Second row', 'b': 'Second var' }
+				]
+				// Any additional data you wish to send
+			}
 	};
 	
-	layout.construct( request, response, klay );
+	layout.turn( request, response, klay );
 };

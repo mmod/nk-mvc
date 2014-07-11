@@ -49,6 +49,26 @@ var accountModel =
 			password: [ true, 'text', 'Password' ],
 			rememberme: [ true, 'int', 'Remember me' ]
 		}
+	},
+	manageView: {
+		getUser: function()
+		{
+			// This is a placeholder
+			return { username: 'Guest' };
+		},
+		schema: {
+			/*
+			 * Account/Manage View model
+			 */
+			company: [ false, 'int', 'Company' ],
+			username: [ false, 'text', 'Username' ],
+			type: [ true, 'text', 'Type' ],
+			email: [ true, 'text', 'Email' ],
+			first: [ true, 'text', 'First Name' ],
+			last: [ true, 'text', 'Last Name' ],
+			password: [ true, 'text', 'Password' ],
+			retypepassword: [ true, 'text', 'Re-Type Password' ]
+		}
 	}
 };
 

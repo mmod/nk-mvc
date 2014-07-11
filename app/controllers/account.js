@@ -22,11 +22,13 @@ accountController.prototype.index = function( request, response )
 			controller: this.config.controller, 
 			view: this.config.view, 
 			layout: 'shared/main',
-			title: 'MMOD Framework',
-			pagetitle: 'Nothing to see here...'
+			viewbag: {
+				title: 'MMOD Framework',
+				pagetitle: 'Nothing to see here...'
+			}
 	};
 	
-	layout.construct( request, response, klay );
+	layout.turn( request, response, klay );
 };
 
 // HTTP GET /account/login
@@ -46,11 +48,13 @@ accountController.prototype.login = function( request, response )
 			model: require( '../models/account' ).loginView,
 			view: this.config.view, 
 			layout: 'shared/main',
-			title: 'MMOD Framework',
-			pagetitle: 'Please log in'
+			viewbag: {
+				title: 'MMOD Framework',
+				pagetitle: 'Please log in'
+			}
 	};
 	
-	layout.construct( request, response, klay );
+	layout.turn( request, response, klay );
 };
 
 // HTTP POST /account/login
@@ -64,8 +68,10 @@ accountController.prototype.loginPost = function( request, response )
 			model: viewModel,
 			view: this.config.view, 
 			layout: 'shared/main',
-			title: 'MMOD Framework',
-			pagetitle: 'You tried to log in.'
+			viewbag: {
+				title: 'MMOD Framework',
+				pagetitle: 'You tried to log in.'
+			}
 	};
 	
 	// Here we define a callback for our authentication method
@@ -90,7 +96,7 @@ accountController.prototype.loginPost = function( request, response )
 			req.session.data.name.first = 'Guest';
 		}
 		
-		layout.construct( req, res, klay );
+		layout.turn( req, res, klay );
 	};
 	
 	// And here we asynchronously execute the model's authenticate method. I'm sure you can see the changes you would need to make
@@ -102,18 +108,24 @@ accountController.prototype.loginPost = function( request, response )
 // HTTP /account/manage
 accountController.prototype.manage = function( request, response )
 {
-	var layout = this.config.view_provider;
-	
-	// We just need to display fields for a login here
-	var klay = { 
+	var viewModel = require( '../models/account' ).manageView,
+	layout = this.config.view_provider,
+	klay = { 
 			controller: this.config.controller, 
+			model: this.model.set( viewModel ),
 			view: this.config.view, 
 			layout: 'shared/main',
-			title: 'MMOD Framework',
-			pagetitle: 'Please manage yourself'
+			viewbag: {
+				title: 'MMOD Framework',
+				pagetitle: 'Please manage yourself.',
+				usercompany: 'Massively Modified, Inc.',
+				username: 'Rik',
+				useremail: 'rik@mmogp.com',
+				usertypes: { 'a': 'Guest', 'b': 'Registered', 'c': 'Moderator', 'd': 'Administrator' }
+			}
 	};
 	
-	layout.construct( request, response, klay );
+	layout.turn( request, response, klay );
 };
 
 //HTTP POST /account/manage
@@ -130,5 +142,5 @@ accountController.prototype.managePost = function( request, response )
 			pagetitle: 'Please manage yourself'
 	};
 	
-	layout.construct( request, response, klay );
+	layout.turn( request, response, klay );
 };

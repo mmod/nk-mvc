@@ -1,6 +1,6 @@
 {
   "name": "nk-mvc",
-  "version": "0.0.1-alpha",
+  "version": "0.0.2-alpha",
   "description": "The Hello World project template for nodakwaeri(nk) on Node.js.",
   "main": "index.js",
   "scripts": {

@@ -226,6 +226,12 @@ footer{
 	box-sizing: border-box;
 }
 
+.block .jumbotron {
+	background: #eee url( '/images/mmod-pallet.png' ) no-repeat;
+	background-size: contain;
+	background-position: 30% 0px;
+}
+
 .block .jumbotron p {
     font-size: 14px;
 }
@@ -249,7 +255,7 @@ footer{
     display: block;
     position: relative;
     background-color: #fff;
-	border-radius: 0;
+	border-radius: 0 !important;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -275,6 +281,92 @@ footer{
     clear: both;
 }
 
+/* The bar across the top of each page with the menu */
+.panel.site-navigation
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 48px;
+	height: auto;
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99999999;
+	background-color: #262626;
+}
+
+.panel.site-navigation .navbar
+{
+	margin: 0 auto;
+	padding: 0;
+	display: block;
+	width: 90%;
+	height: auto;
+	position: relative;
+}
+
+.panel.site-navigation .segment
+{
+	margin: 0;
+	padding: 0;
+	width: auto;
+	min-height: 48px;
+	height: auto;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+}
+
+.panel.site-navigation .segment ul.menu-list
+{
+	margin: 0;
+	padding: 0;
+	width: auto;
+	height: auto;
+	list-style-type: none;
+}
+
+ul.menu-list li
+{
+	margin: 0px 5px;
+	padding: 0;
+	width: auto;
+	height: auto;
+	float: left;
+}
+
+ul.menu-list li a.button, ul.menu-list li button
+{
+	margin: 0;
+	padding: 0px 5px;
+	width: auto;
+	height: auto;
+	min-height: 32px;
+	display: block;
+	vertical-align: middle;
+	line-height: 48px;
+}
+
+ul.menu-list li a.button .icon, ul.menu-list li button .icon
+{
+	margin: 0;
+	padding: 0;
+	width: auto;
+	height: auto;
+	display: inline-block;
+}
+
+ul.menu-list li a.button .button-text, ul.menu-list li button .button-text
+{
+	margin: 0;
+	padding: 0;
+	width: auto;
+	height: auto;
+	display: inline-block;
+}
+
 .panel.vestibule-login{
 	margin: 0 auto; 
 	padding: 0;
@@ -286,6 +378,16 @@ footer{
 	box-shadow: none;
 	/*box-shadow: #aaa 0 0 8px 2px;*/
 	overflow: hidden;
+}
+
+.icon-mmod{
+	margin: 8px 8px;
+	padding: 0;
+	width: 256px;
+	height: 32px;
+	display: block;
+	background: transparent url( '/images/mmod-brand-fin-256x32.png' ) no-repeat; 
+	background-size: contain;
 }
 
 .form-group{

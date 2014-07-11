@@ -9,7 +9,7 @@
 
 
 // Deps
-var nk = require( 'nk' ),
+var nk = require( '../nodakwaeri' ),
 config = require( './config' ),
 app = new nk( config );
 
