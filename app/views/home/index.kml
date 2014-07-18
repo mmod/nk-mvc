@@ -9,13 +9,22 @@
 			            	</center>
 				    	</div>
 				    </section>
+				    <div class="row">
 				    [[ 
 				    	// Testing our foreach function
 				    	foreach( testvar as record )
 				    	{ 
-				    		[[ pagetitle ]]
-				    		[[ record.a ]]
-				    		[[ record.b ]] 
+				    		<div class=" col-md-3">
+					    		<div class="panel panel-default">
+					    			<div class="panel-heading"><center><h3 class="panel-title">[[ record.a ]]</h3></center></div>
+									<div class="panel-body">
+										<center>				    			
+							    			<div>[[ record.b ]]</div>
+							    		</center>
+						    		</div>
+					    		</div>
+					    	</div>
 				    	}
 				    ]]
+				    </div>
 				</div>

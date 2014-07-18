@@ -13,7 +13,7 @@ config =
     // Development configuration
     development: 
     {
-        url: 'http://dev.mmogp.com',
+        url: 'http://localhost:7724',
         forceAdminSSL: true,
         app: 
         {
@@ -28,9 +28,9 @@ config =
             client: 'mysql',
             host: 'localhost',
             port: '3306',
-            database: 'dev',
-            username: 'devadm',
-            password: 'YourDevelopmentPassword',
+            db: 'nkdev',
+            user: 'devadm',
+            password: '^DevPass777$',
             debug: true
         },
         server: 
@@ -43,7 +43,7 @@ config =
     // Production configuration
     production: 
     {
-        url: 'http://dev.mmogp.com',
+        url: 'http://localhost:7724',
         forceAdminSSL: true,
         mail: 
         {
@@ -72,9 +72,9 @@ config =
             client: 'mysql',
             host: 'localhost',
             port: '3306',
-            database: 'pro',
-            username: 'proadm',
-            password: 'YourProductionPassword',
+            db: 'nkpro',
+            user: 'proadm',
+            password: '^ProPass777$',	// Passwords should be strong like so, but this is obviously a bad one to use...
             debug: false
         },
         server: 

@@ -9,10 +9,11 @@
 
 
 // Deps
-var nk = require( '../nodakwaeri' ),
+var nk = require( 'nk' ),
 config = require( './config' ),
 app = new nk( config );
 
+//console.log( app.hash( { data: 'demo' } ) );
 
 // Start our App
 app.init();
