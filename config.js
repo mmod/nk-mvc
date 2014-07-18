@@ -1,8 +1,8 @@
 /**
  * config.js
  * 
- * package: MMod-Node
- * version:  0.0.1
+ * package: nk-mvc
+ * version:  0.0.1-alpha
  */
 
 var path = require('path'),
@@ -11,78 +11,74 @@ var path = require('path'),
 config = 
 {
     // Development configuration
-    development: {
-        url: 'http://dev.mmogp.com',
-        /*
-        mail: {
-	        fromaddress: 'noreply@mmogp.com',
-	        transport: 'SMTP',
-	        options: {
-	             service: 'Gmail',
-	             auth: {
-	                  user: 'rik@mmogp.com',
-	                  pass: ''
-	                   }
-	                 }
-	          },
-	    */
-        app: {
+    development: 
+    {
+        url: 'http://localhost:7724',
+        forceAdminSSL: true,
+        app: 
+        {
         	root: 'app',
         	controller_path: __dirname + '/app/controllers',
     		model_path: __dirname + '/app/models',
     		view_path: __dirname + '/app/views',
     		asset_path: __dirname + '/assets'
         },
-        database: {
+        database: 
+        {
             client: 'mysql',
             host: 'localhost',
             port: '3306',
-            database: 'dev',
-            username: 'devadm',
-            password: 'YourDevelopmentPassword',
-            debug: false
+            db: 'nkdev',
+            user: 'devadm',
+            password: '^DevPass777$',
+            debug: true
         },
-        server: {
+        server: 
+        {
             host: '0.0.0.0',
             port: '7724'
-        },
-        paths: {
-            contentPath: path.join( __dirname, '/media/' )
         }
     },
-
+    
     // Production configuration
-    production: {
-        url: 'http://dev.mmogp.com',
+    production: 
+    {
+        url: 'http://localhost:7724',
         forceAdminSSL: true,
-        mail: {
-            fromaddress: 'noreply@mmogp.com',
-            transport: 'SMTP',
-            options: {
-                 service: 'Gmail',
-                 auth: {
-                      user: 'test@gmail.com',
-                      pass: 'password'
-                       }
-                     }
-              },
-        app: {
+        mail: 
+        {
+			fromaddress: 'noreply@mmogp.com',
+			transport: 'SMTP',
+			options: 
+			{
+				service: 'Gmail',
+				auth: 
+				{
+					user: 'test@gmail.com',
+					pass: 'password'
+				}
+	        }
+        },
+        app: 
+        {
         	root: 'app',
         	controller_path: __dirname + '/app/controllers',
-    		model_path: __dirname + '/app/models',
+        	model_path: __dirname + '/app/models',
     		view_path: __dirname + '/app/views',
     		asset_path: __dirname + '/assets'
         },
-        database: {
+        database: 
+        {
             client: 'mysql',
             host: 'localhost',
             port: '3306',
-            database: 'pro',
-            username: 'proadm',
-            password: 'YourProductionPassword',
+            db: 'nkpro',
+            user: 'proadm',
+            password: '^ProPass777$',	// Passwords should be strong like so, but this is obviously a bad one to use...
             debug: false
         },
-        server: {
+        server: 
+        {
             host: '0.0.0.0',
             port: '7724'
         }

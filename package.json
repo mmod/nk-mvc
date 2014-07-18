@@ -1,0 +1,30 @@
+{
+  "name": "nk-mvc",
+  "version": "0.1.0",
+  "description": "The Hello World project template for nodakwaeri(nk) on Node.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mmod/nk-mvc.git"
+  },
+  "dependencies": {
+	  "nk": "0.2.x",
+	  "nk-mysql": "0.1.x"
+  },
+  "keywords": [
+    "nodakwaeri",
+    "nk",
+    "application",
+    "framework",
+    "mvc"
+  ],
+  "author": "Richard Winters <rik@mmogp.com> (http://www.mmogp.com)",
+  "license": "Apache V2.0",
+  "bugs": {
+    "url": "https://github.com/mmod/nk-mvc/issues"
+  },
+  "homepage": "https://github.com/mmod/nk-mvc"
+}

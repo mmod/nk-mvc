@@ -1,8 +1,30 @@
 				<div class="panel">
 				    <section id="showcase">
-				    	<h1>[[ pagetitle ]]</h1>
-			            <hr />
-				            
-			            <p>Welcome to your new web application :)</p>
+				    	<div class="jumbotron">
+				    		<center>
+				    			<h1>[[ pagetitle ]]</h1>
+			            		<p>Welcome to your new web application :)</p>
+			            		<p><p>
+			            		<h3>Don't hesitate to get started, visit the <a href="http://github.com/mmod/nk-mvc" target="_blank" class="btn btn-primary btn-lg" role="button">nk-mvc documentation.</a></h3>
+			            	</center>
+				    	</div>
 				    </section>
+				    <div class="row">
+				    [[ 
+				    	// Testing our foreach function
+				    	foreach( testvar as record )
+				    	{ 
+				    		<div class=" col-md-3">
+					    		<div class="panel panel-default">
+					    			<div class="panel-heading"><center><h3 class="panel-title">[[ record.a ]]</h3></center></div>
+									<div class="panel-body">
+										<center>				    			
+							    			<div>[[ record.b ]]</div>
+							    		</center>
+						    		</div>
+					    		</div>
+					    	</div>
+				    	}
+				    ]]
+				    </div>
 				</div>

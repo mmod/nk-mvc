@@ -6,7 +6,7 @@
 				            <div class="form-group">
 				            	[[ html.label( model.username, { "classes": "col-md-offset-2 col-md-2 control-label" } ) ]]
 				                <div class="col-md-6">
-				                	[[ html.textbox( model.username, { "classes": "form-control", "name": "username" } ) ]]
+				                	[[ html.textbox( yourUserName, { "classes": "form-control", "name": "username" } ) ]]
 				                	[[ html.validationmessage( model.username ) ]]
 				                </div>
 				            </div>
