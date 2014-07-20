@@ -1,4 +1,4 @@
-# nk-mvc ( v0.1.0 )
+# nk-mvc ( v0.1.1 )
 
 The 'Hello World!' example of - and project template for - a nodakwaeri MVC Application.
 
