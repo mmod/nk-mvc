@@ -7,5 +7,5 @@
 /build
 
 ## nk-mvc ignores
-#/libmysql.dll
-#/ibmysql.lib
+/libmysql.dll
+/ibmysql.lib
