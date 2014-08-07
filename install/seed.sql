@@ -1,6 +1,6 @@
-CREATE SCHEMA IF NOT EXISTS `nkdev` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+CREATE SCHEMA IF NOT EXISTS `mmogpd` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 
-CREATE TABLE IF NOT EXISTS `nkdev`.`users` (
+CREATE TABLE IF NOT EXISTS `mmogpd`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `type` INT NULL,
   `acl` INT NULL,
@@ -22,12 +22,12 @@ CREATE TABLE IF NOT EXISTS `nkdev`.`users` (
   `phone` VARCHAR(45) NULL,
   PRIMARY KEY (`id`));
 
-INSERT INTO `nkdev`.`users` 
+INSERT INTO `mmogpd`.`users` 
 ( `type`, `acl`, `ts`, `company`, `luts`, `username`, `password`, `first`, `last` )
 VALUES
 ( 2, 3, NOW(), 1, NOW(), 'rik', '<ReplaceWithAHashedPassword>', 'Richard', 'Winters' );
 
-CREATE TABLE IF NOT EXISTS `nkdev`.`companies` (
+CREATE TABLE IF NOT EXISTS `mmogpd`.`companies` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `type` INT NULL,
   `ts` DATETIME NULL,
@@ -38,15 +38,15 @@ CREATE TABLE IF NOT EXISTS `nkdev`.`companies` (
   `description` TEXT NULL,
   PRIMARY KEY (`id`));
 
-INSERT INTO `nkdev`.`companies` 
+INSERT INTO `mmogpd`.`companies` 
 ( `type`, `ts`, `owner`, `luts`, `luby`, `name`, `description` )
 VALUES
 ( 2, NOW(), 1, NOW(), 1, 'Massively Modified, Inc.', 'A massively modified, massively modern corporation!' );
 
 
-CREATE SCHEMA IF NOT EXISTS `nkpro` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+CREATE SCHEMA IF NOT EXISTS `mmogpp` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 
-CREATE TABLE IF NOT EXISTS `nkpro`.`users` (
+CREATE TABLE IF NOT EXISTS `mmogpp`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `type` INT NULL,
   `acl` INT NULL,
@@ -68,13 +68,13 @@ CREATE TABLE IF NOT EXISTS `nkpro`.`users` (
   `phone` VARCHAR(45) NULL,
   PRIMARY KEY (`id`));
 
-INSERT INTO `nkpro`.`users` 
+INSERT INTO `mmogpp`.`users` 
 ( `type`, `acl`, `ts`, `company`, `luts`, `username`, `password`, `first`, `last` )
 VALUES
 ( 2, 3, NOW(), 1, NOW(), 'rik', '<ReplaceWithAHashedPassword>', 'Richard', 'Winters' );
 
 
-CREATE TABLE IF NOT EXISTS `nkpro`.`companies` (
+CREATE TABLE IF NOT EXISTS `mmogpp`.`companies` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `type` INT NULL,
   `ts` DATETIME NULL,
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `nkpro`.`companies` (
   `description` TEXT NULL,
   PRIMARY KEY (`id`));
 
-INSERT INTO `nkpro`.`companies` 
+INSERT INTO `mmogpp`.`companies` 
 ( `type`, `ts`, `owner`, `luts`, `luby`, `name`, `description` )
 VALUES
 ( 2, NOW(), 1, NOW(), 1, 'Massively Modified, Inc.', 'A massively modified, massively modern corporation!' );

@@ -9,3 +9,7 @@
 ## nk-mvc ignores
 /libmysql.dll
 /ibmysql.lib
+
+## Tool specific files
+.gitignore~
+.README.md.html

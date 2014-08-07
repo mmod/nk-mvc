@@ -1,4 +1,4 @@
-# nk-mvc ( v0.1.1 )
+# nk-mvc ( v0.1.2 )
 
 The 'Hello World!' example of - and project template for - a nodakwaeri MVC Application.
 
@@ -19,9 +19,9 @@ Alternatively, you could just download a [zip of the source](https://github.com/
 When finished we need to install the dependencies but before we do that we need to make sure we have some prerequisites in place. 
 
 
-## Required Prerequisites
+## Prerequisites
 
-Whether you wish to build or not build any of the components, the [nk-mysql documentation](http://github.com/mmod/nk-mysql) will guide you in ensuring you meet any and all requirements.  Once you've gone through the respective documentation, a link is provided which will redirect you back here in order to complete installation.
+Whether you wish to build or not build any of the components, the [nk-mysql documentation](http://github.com/mmod/nodamysql) will guide you in ensuring you meet any and all requirements.  Once you've gone through the respective documentation, a link is provided which will redirect you back here in order to complete installation.
 
 
 ## The actual installation
