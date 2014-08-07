@@ -31,9 +31,9 @@ var accountModel =
 			
 			// Run our query.  We will not compare passwords quite yet, as we need the timestamp from the record as part of our salt. This is ok since usernames are unique.
 			var authenticated = db
-			.Select( 'users' )
-			.Where( { username: [ '=', 'text', user ], password: [ '=', 'text', pass ] } )
-			.Execute();
+			.select( 'users' )
+			.where( { username: [ '=', user ], password: [ '=', pass ] } )
+			.execute();
 			
 			if( !authenticated[0].username )
 			{

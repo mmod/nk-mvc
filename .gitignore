@@ -1,2 +1,15 @@
-build
-node_modules
+## Eclipse ignores
+# /.jshintrc
+# /.project
+
+## Node.js ignores
+/node_modules
+/build
+
+## nk-mvc ignores
+/libmysql.dll
+/ibmysql.lib
+
+## Tool specific files
+.gitignore~
+.README.md.html

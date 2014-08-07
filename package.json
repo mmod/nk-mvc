@@ -1,6 +1,6 @@
 {
   "name": "nk-mvc",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "The Hello World project template for nodakwaeri(nk) on Node.js.",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "dependencies": {
 	  "nk": "0.2.x",
-	  "nk-mysql": "0.1.x"
+	  "nk-mysql": "0.2.x"
   },
   "keywords": [
     "nodakwaeri",
